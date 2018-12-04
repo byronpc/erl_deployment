@@ -8,6 +8,7 @@
 ]).
 
 start(_StartType, _StartArgs) ->
+    sd_notify:sd_notify(0,"READY=1"),
     erl_deployment_sup:start_link().
 
 stop(_State) ->
