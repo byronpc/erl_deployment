@@ -6,6 +6,7 @@ After=syslog.target network.target local-fs.target
 [Service]
 
 Type=notify
+NotifyAccess=all
 LimitNOFILE=120000
 Restart=on-failure
 RestartSec=5s
